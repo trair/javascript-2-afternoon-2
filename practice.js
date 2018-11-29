@@ -161,15 +161,12 @@ var getRandomArbitrary = function() {
 
 function finder(arr) {
   let randomNum = getRandomArbitrary()
-  let match = false
-  for (i=0; i<arr.length; i++) {
+  for (let i=0; i<arr.length; i++) {
     if (randomNum===arr[i]) {
-      match = true
-    } else {
-      match = false
+      return true
     }
   }
-  return match
+  return false
 }
 
 
@@ -244,7 +241,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Return a new array after adding ten to each item in numbers. 
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
-  
+
 
 function addTen(numbers) {
   let numbersChanged = []
@@ -349,10 +346,7 @@ var colt = {
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-devMountainEmployees.push(tyler)
-devMountainEmployees.push(cahlan)
-devMountainEmployees.push(ryan)
-devMountainEmployees.push(colt)
+devMountainEmployees.push(tyler, cahlan, ryan, colt)
 console.log(devMountainEmployees.length)
 
 
@@ -428,7 +422,7 @@ users.push(user1)
 */
 
 for (i=0; i<users.length; i++) {
-  if (users[i].email == "tylermcginnis33@gmail.com") {
+  if (users[i].email === "tylermcginnis33@gmail.com") {
     users.splice(i,1)
   }
 }
